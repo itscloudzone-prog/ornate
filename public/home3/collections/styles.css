@@ -1,0 +1,102 @@
+@import "tailwindcss" source(none);
+@source "./CollectionsSection.tsx";
+@source "./IronworkMotifs.tsx";
+@source "./ornateCatalog.ts";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-graphite-base: #101419;
+  --color-graphite-surface: #191F25;
+  --color-graphite-elevated: #202730;
+  --color-graphite-border: #2A333E;
+  --color-iron-primary: #D6DCE2;
+  --color-iron-secondary: #A5B0BC;
+  --color-platinum-edge: #E3EAF1;
+  --color-platinum-muted: #7B8794;
+}
+
+@layer base {
+  html {
+    background-color: #101419;
+    color: #D6DCE2;
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #101419;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid #D6DCE2;
+    outline-offset: 3px;
+  }
+}
+
+/* Narrow forged-platinum specular hairline */
+.platinum-hairline {
+  background: linear-gradient(
+    90deg,
+    rgba(214, 220, 226, 0.04) 0%,
+    rgba(227, 234, 241, 0.34) 50%,
+    rgba(214, 220, 226, 0.04) 100%
+  );
+}
+
+.platinum-edge-border {
+  border: 1px solid rgba(214, 220, 226, 0.12);
+  box-shadow: inset 0 1px 0 0 rgba(227, 234, 241, 0.08);
+}
+
+/* Ironwork arch-aperture reveal for collection imagery */
+.iron-mask-reveal {
+  clip-path: inset(12% 0% 0% 0% round 96px 96px 0px 0px);
+  opacity: 0.35;
+  transform: translateY(18px);
+  transition:
+    clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: clip-path, transform, opacity;
+}
+
+.iron-mask-reveal.is-revealed {
+  clip-path: inset(0% 0% 0% 0% round 0px 0px 0px 0px);
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .iron-mask-reveal {
+    clip-path: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Shadow-root boundary: match HOME 1 without inheriting HOME 3 typography. */
+:host {
+  display:block;
+  font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.5;
+  letter-spacing:.01em;
+  color:#D6DCE2;
+  background:#101419;
+  -webkit-font-smoothing:antialiased;
+}

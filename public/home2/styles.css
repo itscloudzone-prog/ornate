@@ -129,3 +129,6 @@ input:focus,textarea:focus{border-color:#fff}
 .home-switcher a[aria-current="page"] { background: #d6dce2; color: #101419; }
 html { scroll-padding-top: calc(90px + env(safe-area-inset-top, 0px)); }
 
+
+/* Three homepage versions fit on narrow screens. */
+@media (max-width: 480px) { .home-switcher a { min-width: 78px; padding-inline: 12px; font-size: 11px; } }

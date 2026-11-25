@@ -1,0 +1,40 @@
+{
+  "company": "Ornate Ironworks & Decor",
+  "website": "https://ornateirondecor.com/",
+  "images": {
+    "logo-white.png": "https://ornateirondecor.com/wp-content/uploads/2025/09/Ornate-Logo-White.png",
+    "hero-gate.jpg": "https://ornateirondecor.com/wp-content/uploads/2026/02/slider1.jpg",
+    "project-before.webp": "https://ornateirondecor.com/wp-content/uploads/2026/03/Ornate_Posts.png",
+    "project-after.webp": "https://ornateirondecor.com/wp-content/uploads/2026/02/163.png",
+    "collection-driveway.jpg": "https://ornateirondecor.com/wp-content/uploads/2026/02/Untitled-design.jpg",
+    "collection-laser.webp": "https://ornateirondecor.com/wp-content/uploads/2026/02/Driveway-4.png",
+    "collection-pedestrian.webp": "https://ornateirondecor.com/wp-content/uploads/2026/02/Pedestrian-Gate-1.webp",
+    "collection-railings.webp": "https://ornateirondecor.com/wp-content/uploads/2026/02/Black_metal_railing_Made_in_Canada.webp",
+    "collection-botanical.webp": "https://ornateirondecor.com/wp-content/uploads/2026/02/BotanicalAscentLaserCutStairRailing.webp",
+    "project-porch.jpg": "https://ornateirondecor.com/wp-content/uploads/2026/02/slider2.jpg",
+    "craft-metalwork.webp": "https://ornateirondecor.com/wp-content/uploads/2026/02/unnamed-1.png"
+  },
+  "animation": {
+    "source": "https://github.com/theatre-js/theatre",
+    "browserBundle": "https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.7.2/dist/core-only.min.js",
+    "state": "../motion-state.js",
+    "license": "../vendor/THEATRE-LICENSE.txt"
+  },
+  "fonts": {
+    "source": "Google Fonts official Latin variable fonts",
+    "licenses": [
+      "fonts/CormorantGaramond-OFL.txt",
+      "fonts/Manrope-OFL.txt"
+    ]
+  },
+  "heroScene": {
+    "tool": "Built-in image_gen",
+    "type": "AI-edited design visualization based on collection-driveway.jpg",
+    "backplate": "hero-estate-backplate.png",
+    "foreground": "hero-gate-cutout.png",
+    "prompts": {
+      "backplate": "Use case: precise-object-edit. Edit target: the supplied square photograph of the white-gabled Ontario home. Asset: clean architectural backplate for a website's layered scroll-opening gate scene. Keep the exact house, camera position, framing, stone piers, trees and driveway geometry. Remove ONLY both wrought iron gate leaves, their central latch, and the parked vehicle behind the gate, revealing a continuous natural empty driveway to the garage. Keep the two stone piers in exactly the same positions and sizes. Improve photographic clarity and finish with cinematic early blue-hour light, subtle warm windows, elegant cool slate stone and natural green foliage; keep the building clearly visible and realistic, no dramatic darkness. No gate, no fence spanning the driveway, no text, no logos, no people. Square image, preserve the source composition. This is an edited design visualization, not a new house.",
+      "gate": "Use case: background-extraction. Edit target: isolate the entire CLOSED double-leaf wrought-iron driveway gate from the supplied reference photo. Asset: transparent PNG foreground layer for a website gate-opening animation. Preserve the elegant arched silhouette rising at the center, symmetrical S-scrollwork, vertical black steel pickets, dark horizontal bottom kick rails and small center latch. Render as a meticulously realistic straight-on front elevation, with both equal-width leaves CLOSED touching precisely at the vertical center seam. Gate only, NO stone piers, NO house, NO ground, NO foliage, NO vehicle, NO cast ground shadow, NO text. True transparent alpha through all spaces between bars, above the arch, and outside the gate. Premium satin charcoal iron with subtle cool silver highlights and physical thickness, not white line art. Complete gate uncropped; minimal transparent margin around outer silhouette; wide approximately 1.9:1 composition. Both bottoms level on the same baseline and outer edges vertical. It will be split exactly at the center to rotate each leaf around its outer hinge."
+    }
+  }
+}
