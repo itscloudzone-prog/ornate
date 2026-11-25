@@ -1,0 +1,18 @@
+{
+  "name": "Ornate Home 4 — Nocturne",
+  "assets": "Existing local Ornate assets in ../home3/assets; original sources in ../home3/assets/sources.json. The isolated hero gate is an existing design visualization.",
+  "fonts": "Locally hosted Cormorant Garamond and Manrope; font licenses are retained in ../home3/assets/fonts.",
+  "animation": {
+    "library": "Theatre.js",
+    "source": "https://github.com/theatre-js/theatre",
+    "runtime": "../home3/vendor/theatre-core.min.js",
+    "license": "../home3/vendor/THEATRE-LICENSE.txt",
+    "choreography": "Original iris entrance and scroll-driven product study in motion-state.js; native fallback in main.js."
+  },
+  "spatialGallery": {
+    "inspiration": "3D Gallery by jsulpis",
+    "reference": "https://codepen.io/jsulpis/pen/GRMwBGR",
+    "implementation": "Original responsive CSS 3D gallery using inverse camera transforms, with Ornate products, keyboard and touch controls."
+  },
+  "patterns": "Original generated SVG botanical, geometric and radial ornamental studies."
+}

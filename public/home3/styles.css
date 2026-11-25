@@ -337,3 +337,4 @@ h1 em {background:linear-gradient(115deg,#8b9ca7,#eff4f5 42%,#8d9da7 80%);-webki
   .hero-scroll-track>.hero,.hero-estate { position:relative; top:auto; }
   .gate-panel { will-change:auto; }
 }
+@media (max-width: 480px) { .home-switcher a { min-width: 64px; padding-inline: 10px; } }

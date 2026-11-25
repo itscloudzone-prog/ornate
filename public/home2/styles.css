@@ -130,5 +130,5 @@ input:focus,textarea:focus{border-color:#fff}
 html { scroll-padding-top: calc(90px + env(safe-area-inset-top, 0px)); }
 
 
-/* Three homepage versions fit on narrow screens. */
-@media (max-width: 480px) { .home-switcher a { min-width: 78px; padding-inline: 12px; font-size: 11px; } }
+/* Four homepage versions fit on narrow screens. */
+@media (max-width: 480px) { .home-switcher a { min-width: 64px; padding-inline: 10px; font-size: 11px; } }

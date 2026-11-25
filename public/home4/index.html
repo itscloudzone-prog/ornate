@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#080808" />
+    <meta
+      name="description"
+      content="Iron, in its finest form. Explore bespoke gates, architectural railings and patterned screens by Ornate Ironworks & Decor in Woodbridge, Ontario."
+    />
+    <title>Ornate — Iron, in its finest form | Home 4</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="../home3/assets/fonts/manrope-latin-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../home3/assets/fonts/cormorant-garamond-latin-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../home3/assets/hero-gate-cutout.png"
+      as="image"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="../home3/vendor/theatre-core.min.js" defer></script>
+    <script src="./motion-state.js" defer></script>
+    <script src="./main.js" defer></script>
+  </head>
+  <body data-scene="arrival">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere-silver"></div>
+      <div class="atmosphere-gold"></div>
+      <div class="atmosphere-grain"></div>
+    </div>
+    <div class="reading-progress" aria-hidden="true">
+      <span id="reading-progress"></span>
+    </div>
+
+    <div
+      class="iris-intro"
+      id="iris-intro"
+      role="dialog"
+      aria-modal="true"
+      aria-label="An introduction to the Ornate atelier"
+      hidden
+    >
+      <div class="iris-backdrop"></div>
+      <div class="iris-blades" aria-hidden="true"></div>
+      <div class="iris-rosette" data-pattern="rosette" aria-hidden="true"></div>
+      <div class="iris-wordmark">
+        <span class="intro-monogram">O</span
+        ><span>AN OPENING TO SOMETHING EXTRAORDINARY</span>
+      </div>
+      <button class="intro-skip" id="intro-skip" type="button">
+        Skip introduction
+      </button>
+      <p class="intro-baseline">
+        ORNATE IRONWORKS &amp; DECOR <span>WOODBRIDGE, ONTARIO</span>
+      </p>
+    </div>
+
+    <div id="page-content">
+      <header class="site-header">
+        <a
+          class="wordmark"
+          href="#arrival"
+          aria-label="Ornate Ironworks & Decor home"
+          ><span
+            >ORNATE<span class="brand-star" aria-hidden="true">✳</span></span
+          ><small>IRONWORKS &amp; DECOR</small></a
+        >
+        <nav class="home-switcher" aria-label="Homepage versions">
+          <a href="../">HOME 1</a><a href="../home2/index.html">HOME 2</a
+          ><a href="../home3/index.html">HOME 3</a
+          ><a href="./index.html" aria-current="page">HOME 4</a>
+        </nav>
+        <a class="header-contact" href="#commission"
+          >Let’s create something
+          <span class="gold-dot" aria-hidden="true"></span
+        ></a>
+      </header>
+
+      <main id="main">
+        <div class="arrival-track" id="arrival" data-scene="arrival">
+          <section class="arrival" aria-labelledby="arrival-title">
+            <div class="arrival-top">
+              <div>
+                <p class="eyebrow">
+                  <span class="small-spark" aria-hidden="true">✧</span> THE ART
+                  OF ARCHITECTURAL IRONWORK
+                </p>
+                <h1 id="arrival-title">
+                  Iron, in its<br /><em>finest form.</em>
+                </h1>
+              </div>
+              <div class="arrival-intro">
+                <p>
+                  A little more character.<br />A completely different arrival.
+                </p>
+                <p class="muted">
+                  Bespoke gates, railings and screens.<br />Made around your
+                  home. Made in Woodbridge.
+                </p>
+                <a class="underlined-link" href="#collection"
+                  >Discover the collection <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+
+            <div class="product-stage" id="product-stage">
+              <div class="stage-word" aria-hidden="true">ORNATE</div>
+              <div class="stage-orbit" aria-hidden="true"></div>
+              <div class="stage-light" aria-hidden="true"></div>
+              <div class="product-elevation" id="product-elevation">
+                <img
+                  src="../home3/assets/hero-gate-cutout.png"
+                  alt="Front elevation of a black double iron gate with an arched crown and intricate hand-forged scrollwork"
+                  width="1730"
+                  height="909"
+                  fetchpriority="high"
+                />
+              </div>
+              <div class="stage-floor" aria-hidden="true"></div>
+              <div class="product-note">
+                <span class="line-marker" aria-hidden="true"></span
+                ><span id="product-note">A STATEMENT IN EVERY LINE</span>
+              </div>
+              <button
+                class="detail-control"
+                id="detail-control"
+                type="button"
+                aria-pressed="false"
+              >
+                <span class="zoom-icon" aria-hidden="true">+</span
+                ><span id="detail-control-label">Explore the scrollwork</span>
+              </button>
+            </div>
+
+            <div class="arrival-bottom">
+              <p>DESIGNED TO BE DISTINCT.<br /><span>BUILT TO BELONG.</span></p>
+              <a class="scroll-invitation" href="#collection"
+                ><span class="scroll-track" aria-hidden="true"><i></i></span
+                >SCROLL TO DISCOVER</a
+              ><button class="replay-intro" id="replay-intro" type="button">
+                Replay the opening <span aria-hidden="true">↻</span>
+              </button>
+            </div>
+
+            <div class="corner-study" id="corner-study">
+              <button
+                class="corner-trigger"
+                id="corner-trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="corner-preview"
+              >
+                <span class="corner-crop"
+                  ><img
+                    src="../home3/assets/hero-gate-cutout.png"
+                    alt="Magnified iron scrollwork pattern"
+                    width="1730"
+                    height="909" /></span
+                ><span class="corner-trigger-copy"
+                  >THE DETAIL<span>Hover to see the whole</span></span
+                ><span class="corner-plus" aria-hidden="true">+</span>
+              </button>
+              <div class="corner-preview" id="corner-preview" hidden>
+                <img
+                  src="../home3/assets/collection-driveway.jpg"
+                  alt="The complete arched driveway gate installed in front of a white-gabled home"
+                  width="1080"
+                  height="1080"
+                />
+                <div>
+                  <span class="eyebrow">FROM DETAIL TO DESIGN</span>
+                  <p>The whole picture.</p>
+                  <a href="https://ornateirondecor.com/driveway-gates/"
+                    >Explore driveway gates</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="atelier-ribbon" aria-label="Our approach">
+          <span>BESPOKE BY NATURE</span><i aria-hidden="true">✧</i
+          ><span>DRAWN WITH INTENTION</span><i aria-hidden="true">✧</i
+          ><span>CRAFTED IN WOODBRIDGE</span><i aria-hidden="true">✧</i
+          ><span>MADE FOR YOUR ARCHITECTURE</span>
+        </div>
+
+        <section
+          class="collection section-pad"
+          id="collection"
+          data-scene="collection"
+          aria-labelledby="collection-title"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">THE COLLECTION</p>
+              <h2 id="collection-title">
+                A presence.<br /><em>In every opening.</em>
+              </h2>
+            </div>
+            <p>
+              There’s a language to your home.<br />We make ironwork that speaks
+              it.
+            </p>
+          </div>
+          <div class="collection-layout">
+            <a
+              class="collection-photo reveal"
+              id="collection-photo-link"
+              href="https://ornateirondecor.com/driveway-gates/"
+              ><img
+                id="collection-photo"
+                src="../home3/assets/collection-driveway.jpg"
+                alt="Arched black iron driveway gate framing a white-gabled home"
+                width="1080"
+                height="1080"
+                loading="lazy"
+              />
+              <div class="photo-topline">
+                <span>ARCHITECTURAL COLLECTION</span
+                ><span class="photo-plus" aria-hidden="true">↗</span>
+              </div>
+              <div class="photo-bottomline">
+                <p id="collection-photo-title">The first impression.</p>
+                <span id="collection-photo-meta"
+                  >DRIVEWAY GATES · MADE TO MEASURE</span
+                >
+              </div></a
+            >
+            <div
+              class="collection-index reveal"
+              role="group"
+              aria-label="Choose a metalwork collection"
+            >
+              <p class="eyebrow index-intro">FIND YOUR EXPRESSION</p>
+              <button
+                class="collection-choice is-active"
+                type="button"
+                data-collection="gates"
+                aria-pressed="true"
+              >
+                <span class="choice-copy"
+                  ><span>Driveway gates</span
+                  ><small>An entrance with intention.</small></span
+                ><span class="choice-symbol" aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="collection-choice"
+                type="button"
+                data-collection="pedestrian"
+                aria-pressed="false"
+              >
+                <span class="choice-copy"
+                  ><span>Pedestrian gates</span
+                  ><small>A quieter kind of statement.</small></span
+                ><span class="choice-symbol" aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="collection-choice"
+                type="button"
+                data-collection="railings"
+                aria-pressed="false"
+              >
+                <span class="choice-copy"
+                  ><span>Architectural railings</span
+                  ><small>A beautiful line to follow.</small></span
+                ><span class="choice-symbol" aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="collection-choice"
+                type="button"
+                data-collection="screens"
+                aria-pressed="false"
+              >
+                <span class="choice-copy"
+                  ><span>Patterned screens</span
+                  ><small>Privacy with personality.</small></span
+                ><span class="choice-symbol" aria-hidden="true">↗</span>
+              </button>
+              <div class="collection-selection">
+                <p id="collection-description" aria-live="polite">
+                  Arched, linear or intricately ornamental. A custom gate gives
+                  your entrance a character all its own.
+                </p>
+                <a
+                  class="underlined-link"
+                  id="collection-link"
+                  href="https://ornateirondecor.com/driveway-gates/"
+                  >Explore driveway gates <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="pattern-section section-pad"
+          id="patterns"
+          data-scene="pattern"
+          aria-labelledby="pattern-title"
+        >
+          <div class="pattern-heading reveal">
+            <p class="eyebrow">THE SIGNATURE IS IN THE DETAIL</p>
+            <h2 id="pattern-title">
+              From a single line.<br />To <em>something unmistakable.</em>
+            </h2>
+            <p>
+              Botanical curves. Architectural rhythm. A pattern that feels like
+              you.
+            </p>
+          </div>
+          <div class="pattern-workbench reveal">
+            <div
+              class="pattern-art"
+              id="pattern-art"
+              data-pattern="botanical"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="pattern-crosshair crosshair-top"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="pattern-crosshair crosshair-bottom"
+              aria-hidden="true"
+            ></div>
+            <div class="pattern-caption">
+              <span class="eyebrow">A STUDY IN LIGHT &amp; SHADOW</span
+              ><span id="pattern-name">Botanical scroll</span>
+            </div>
+            <div
+              class="pattern-controls"
+              role="group"
+              aria-label="Explore decorative patterns"
+            >
+              <button type="button" data-motif="botanical" aria-pressed="true">
+                Botanical</button
+              ><button
+                type="button"
+                data-motif="geometric"
+                aria-pressed="false"
+              >
+                Geometric</button
+              ><button type="button" data-motif="rosette" aria-pressed="false">
+                Rosette
+              </button>
+            </div>
+          </div>
+          <div class="pattern-footnote">
+            <span>ORNAMENT, WITH PURPOSE.</span>
+            <p>Choose a direction. We’ll make it your own.</p>
+            <a class="underlined-link" href="#commission"
+              >Discuss your pattern <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </section>
+
+        <section
+          class="gallery-section section-pad"
+          id="perspectives"
+          data-scene="gallery"
+          aria-labelledby="gallery-title"
+        >
+          <div class="gallery-heading reveal">
+            <p class="eyebrow">A SPATIAL COLLECTION</p>
+            <h2 id="gallery-title">A different<br /><em>point of view.</em></h2>
+            <p>Step closer. There’s more to every piece.</p>
+          </div>
+          <div
+            class="gallery-room"
+            id="gallery-room"
+            role="group"
+            aria-label="Interactive three-dimensional product gallery"
+          >
+            <div class="gallery-orbit" aria-hidden="true"></div>
+            <div class="gallery-floor" aria-hidden="true"></div>
+            <div class="gallery-camera" id="gallery-camera">
+              <article class="gallery-panel" data-gallery="0">
+                <button
+                  type="button"
+                  aria-label="Move closer to the geometric gate"
+                  aria-pressed="false"
+                >
+                  <img
+                    src="../home3/assets/collection-laser.webp"
+                    alt="Geometric diagonal steel gate installed at a contemporary house"
+                    width="832"
+                    height="758"
+                    loading="lazy"
+                  /><span>GEOMETRIC GATES <i aria-hidden="true">+</i></span>
+                </button>
+              </article>
+              <article class="gallery-panel" data-gallery="1">
+                <button
+                  type="button"
+                  aria-label="Move closer to the botanical railing"
+                  aria-pressed="false"
+                >
+                  <img
+                    src="../home3/assets/collection-botanical.webp"
+                    alt="Laser-cut botanical metal panels fitted into a staircase railing"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  /><span>BOTANICAL RAILINGS <i aria-hidden="true">+</i></span>
+                </button>
+              </article>
+              <article class="gallery-panel" data-gallery="2">
+                <button
+                  type="button"
+                  aria-label="Move closer to the pedestrian gate"
+                  aria-pressed="false"
+                >
+                  <img
+                    src="../home3/assets/collection-pedestrian.webp"
+                    alt="Custom ornamental metal pedestrian gate at a residential entrance"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  /><span>PEDESTRIAN GATES <i aria-hidden="true">+</i></span>
+                </button>
+              </article>
+            </div>
+          </div>
+          <div class="gallery-bottom">
+            <div class="gallery-current" aria-live="polite">
+              <span class="eyebrow">THREE EXPRESSIONS. ONE ATELIER.</span>
+              <p id="gallery-caption">Select a piece to step inside.</p>
+            </div>
+            <div class="gallery-actions">
+              <button
+                type="button"
+                class="gallery-nav"
+                id="gallery-prev"
+                aria-label="Previous product"
+              >
+                ←</button
+              ><button type="button" class="gallery-reset" id="gallery-reset">
+                View all three</button
+              ><button
+                type="button"
+                class="gallery-nav"
+                id="gallery-next"
+                aria-label="Next product"
+              >
+                →
+              </button>
+            </div>
+            <a
+              class="underlined-link"
+              id="gallery-link"
+              href="https://ornateirondecor.com/gallery/"
+              >Explore the gallery <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </section>
+
+        <section
+          class="finish-section section-pad"
+          id="finishes"
+          data-scene="finish"
+          aria-labelledby="finish-title"
+        >
+          <div class="finish-copy reveal">
+            <p class="eyebrow">THE FINAL EXPRESSION</p>
+            <h2 id="finish-title">
+              Dark by nature.<br /><em>Distinct by finish.</em>
+            </h2>
+            <p>
+              Deep black. A whisper of silver. A touch of warm metallic light.
+              Explore the character a finish can bring to your design.
+            </p>
+            <div
+              class="finish-options"
+              role="group"
+              aria-label="Preview a finish direction"
+            >
+              <button
+                class="finish-option"
+                type="button"
+                data-finish="black"
+                aria-pressed="true"
+              >
+                <span class="finish-swatch swatch-black"></span
+                ><span>Graphite black</span></button
+              ><button
+                class="finish-option"
+                type="button"
+                data-finish="silver"
+                aria-pressed="false"
+              >
+                <span class="finish-swatch swatch-silver"></span
+                ><span>Brushed silver</span></button
+              ><button
+                class="finish-option"
+                type="button"
+                data-finish="gold"
+                aria-pressed="false"
+              >
+                <span class="finish-swatch swatch-gold"></span
+                ><span>Champagne gold</span>
+              </button>
+            </div>
+            <p class="finish-note">
+              A starting point for your palette. Your final finish is agreed
+              during consultation.
+            </p>
+            <a class="underlined-link" href="#commission"
+              >Find your finish <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div
+            class="finish-object reveal"
+            id="finish-object"
+            data-finish="black"
+          >
+            <div
+              class="finish-disc"
+              data-pattern="rosette"
+              aria-hidden="true"
+            ></div>
+            <div class="finish-glint" aria-hidden="true"></div>
+            <span class="finish-object-label"
+              >THE MATERIAL STUDY
+              <span id="finish-label">GRAPHITE BLACK</span></span
+            >
+          </div>
+        </section>
+
+        <section
+          class="craft-section section-pad"
+          id="atelier"
+          data-scene="craft"
+          aria-labelledby="craft-title"
+        >
+          <div class="craft-visual reveal">
+            <img
+              src="../home3/assets/craft-metalwork.webp"
+              alt="Metal fabrication and hand finishing in the Ornate workshop"
+              width="1080"
+              height="1080"
+              loading="lazy"
+            />
+            <div class="craft-image-shade"></div>
+            <span class="eyebrow">THE WOODBRIDGE ATELIER</span>
+            <p>Shaped by hand.<br /><em>Defined by detail.</em></p>
+          </div>
+          <div class="craft-copy reveal">
+            <p class="eyebrow">FROM THE FIRST LINE TO THE FINAL FIT</p>
+            <h2 id="craft-title">
+              Considered.<br />Crafted.<br /><em>Completely yours.</em>
+            </h2>
+            <div class="craft-steps">
+              <details open>
+                <summary>
+                  Your architecture, first.<span aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  We start with your property, proportions and ideas. On-site
+                  measurements turn a first conversation into a design made for
+                  your space.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  Precision meets personality.<span aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Custom drafting, laser-cut patterns and hand-finished
+                  metalwork bring the character of your design into every line
+                  and connection.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  The finishing touch.<span aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Finish, hardware and installation come together around your
+                  home. Discuss the details with our Woodbridge team.
+                </p>
+              </details>
+            </div>
+            <a
+              class="underlined-link"
+              href="https://ornateirondecor.com/our-projects/"
+              >Inside our work <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </section>
+
+        <section
+          class="commission-section section-pad"
+          id="commission"
+          data-scene="commission"
+          aria-labelledby="commission-title"
+        >
+          <div
+            class="commission-ornament"
+            data-pattern="rosette"
+            aria-hidden="true"
+          ></div>
+          <div class="commission-copy reveal">
+            <p class="eyebrow">YOUR HOME. YOUR SIGNATURE.</p>
+            <h2 id="commission-title">Let’s make<br /><em>an entrance.</em></h2>
+            <p>
+              A sketch. A photograph. An idea you can’t quite put into words.
+              That’s where we begin.
+            </p>
+            <a class="contact-number" href="tel:+13658822213"
+              >+1 (365) 882-2213</a
+            ><a class="contact-email" href="mailto:connect@ornateirondecor.com"
+              >connect@ornateirondecor.com</a
+            >
+            <p class="address">
+              136 Winges Rd, Unit 6<br />Woodbridge, Ontario<br /><span
+                >Serving Toronto, Vaughan &amp; the GTA</span
+              >
+            </p>
+          </div>
+          <form class="commission-form reveal" id="commission-form">
+            <p class="eyebrow">TELL US WHAT YOU HAVE IN MIND</p>
+            <div class="form-row">
+              <label
+                >Your name<input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Alex Morgan"
+                  required
+                  maxlength="120" /></label
+              ><label
+                >Email address<input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="alex@example.com"
+                  required
+                  maxlength="254"
+              /></label>
+            </div>
+            <label
+              >I’m interested in<select name="product" id="project-product">
+                <option>Driveway gate</option>
+                <option>Pedestrian gate</option>
+                <option>Architectural railing</option>
+                <option>Patterned screen</option>
+                <option>Something entirely custom</option>
+              </select></label
+            ><label
+              >Your idea<textarea
+                name="message"
+                rows="3"
+                placeholder="Tell us about your space, style or project…"
+                required
+                minlength="10"
+                maxlength="4000"
+              ></textarea></label
+            ><button class="commission-submit" type="submit">
+              <span>Begin the conversation</span
+              ><span class="button-spark" aria-hidden="true">✧</span>
+            </button>
+            <p class="form-note">
+              Opens your email app with your project details ready to send.
+            </p>
+            <div class="form-result" id="form-result" role="status" hidden>
+              <p>Your project brief is ready.</p>
+              <a id="draft-link" href="mailto:connect@ornateirondecor.com"
+                >Open email draft</a
+              ><button id="copy-brief" type="button">
+                Copy project details</button
+              ><span id="copy-status"></span>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="footer-wordmark" href="#arrival"
+          >ORNATE<span aria-hidden="true">✳</span></a
+        >
+        <div class="footer-bottom">
+          <span>IRONWORKS &amp; DECOR · WOODBRIDGE, ONTARIO</span>
+          <div>
+            <a
+              href="https://www.instagram.com/ornateirondecor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            ><a href="https://ornateirondecor.com/gallery/">Project gallery</a
+            ><a href="#arrival">Back to the beginning ↑</a>
+          </div>
+          <span>© <span id="copyright-year">2026</span> ORNATE</span>
+        </div>
+      </footer>
+      <button
+        class="motion-control"
+        id="motion-control"
+        type="button"
+        aria-pressed="false"
+        aria-label="Pause ambient animation"
+      >
+        <span aria-hidden="true">Ⅱ</span
+        ><span id="motion-label">Pause motion</span>
+      </button>
+    </div>
+  </body>
+</html>
